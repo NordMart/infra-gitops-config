@@ -6,15 +6,11 @@ spec:
   quota: nordmart-large
   owners:
     users:
-      - asfa@stakater.com
-      - mustafa@stakater.com
+      - neymar
   argocd:
     sourceRepos:
       - 'https://github.com/stakater/charts.git'
       - 'https://github.com/stakater-lab/webinar-apps-gitops-config'
   namespaces:
   - build
-  - preview
   - dev
-  - stage
-  - prod
