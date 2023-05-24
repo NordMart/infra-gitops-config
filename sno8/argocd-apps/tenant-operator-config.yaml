@@ -6,7 +6,6 @@ metadata:
   namespace: rh-openshift-gitops-instance
 spec:
   destination:
-    namespace: openshift-gitops
     server: 'https://kubernetes.default.svc'
   source:
     path: sno8/tenant-operator-config
