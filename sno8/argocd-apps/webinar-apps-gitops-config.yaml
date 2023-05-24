@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: webinar-apps-gitops-config
-  namespace: openshift-gitops
+  namespace: rh-openshift-gitops-instance
 spec:
   destination:
     namespace: openshift-gitops
