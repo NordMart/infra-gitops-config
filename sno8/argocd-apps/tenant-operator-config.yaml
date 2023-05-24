@@ -1,15 +1,16 @@
+
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nordmart-stageprod-appofapps
+  name: tenant-operator-config
   namespace: openshift-gitops
 spec:
   destination:
     namespace: openshift-gitops
     server: 'https://kubernetes.default.svc'
   source:
-    path: 00-argocd-apps/02-stage-prod
-    repoURL: 'https://github.com/stakater/nordmart-apps-gitops-config.git'
+    path: sno8/tenant-operator-config
+    repoURL: 'https://github.com/stakater-lab/webinar-infra-gitops-config.git'
     targetRevision: main
     directory:
       recurse: true
@@ -18,3 +19,4 @@ spec:
     automated:
       prune: true
       selfHeal: true
+
