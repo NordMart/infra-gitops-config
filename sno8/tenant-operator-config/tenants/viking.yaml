@@ -3,7 +3,7 @@ kind: Tenant
 metadata:
   name: viking
 spec:
-  quota: nordmart-large
+  quota: large
   owners:
     users:
       - neymar
