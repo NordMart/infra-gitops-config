@@ -3,7 +3,7 @@ kind: Tenant
 metadata:
   name: viking
 spec:
-  quota: large
+  quota: webinar-large
   owners:
     users:
       - neymar
