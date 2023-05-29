@@ -6,7 +6,7 @@ spec:
   quota: webinar-large
   owners:
     users:
-      - neymar
+      - neymar@arsenal.com
   argocd:
     sourceRepos:
       - 'https://github.com/stakater/charts.git'
