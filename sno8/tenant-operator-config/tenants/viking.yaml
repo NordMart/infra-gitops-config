@@ -7,6 +7,7 @@ spec:
   owners:
     users:
       - neymar@arsenal.com
+      - messi@chelsea.com
   argocd:
     sourceRepos:
       - 'https://github.com/stakater/charts.git'
