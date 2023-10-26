@@ -1,21 +1,18 @@
-
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: tenant-operator-config
+  name: webinar-apps-gitops-config
   namespace: rh-openshift-gitops-instance
 spec:
   destination:
+    namespace: rh-openshift-gitops-instance
     server: 'https://kubernetes.default.svc'
-  source:
-    path: sno8/tenant-operator-config
-    repoURL: 'https://github.com/stakater-lab/webinar-infra-gitops-config.git'
-    targetRevision: main
-    directory:
-      recurse: true
   project: default
+  source:
+    path: argocd-apps/CLUSTER_NAME
+    repoURL: 'https://github.com/DESTINATION_ORG/webinar-apps-gitops-config'
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-

@@ -1,0 +1,21 @@
+apiVersion: tenantoperator.stakater.com/v1alpha1
+kind: Template
+metadata:
+  name: git-pat-creds
+resources:
+  manifests:
+    - apiVersion: external-secrets.io/v1beta1
+      kind: ExternalSecret
+      metadata:
+        name: git-pat-creds
+      spec:
+        dataFrom:
+          - extract:
+              conversionStrategy: Default
+              key: git-auth-cred
+        refreshInterval: 1m0s
+        secretStoreRef:
+          kind: ClusterSecretStore
+          name: stakater-cluster-secret-store
+        target:
+          name: git-auth-cred

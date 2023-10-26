@@ -4,8 +4,8 @@ Global/common/cluster scoped resources are deployed via this gitops config repos
 
 We have 2 clusters:
 
-1. Cluster # 1 (i.e. sno8) 
+1. Cluster # 1 (i.e. stakater-demo) 
 
 ## Application workloads
 
-The environment scoped application resources are deployed through [webinar-apps-gitops-config](https://github.com/stakater-lab/webinar-apps-gitops-config) repository. 
+The environment scoped application resources are deployed through [webinar-apps-gitops-config](https://github.com/DESTINATION_ORG/webinar-apps-gitops-config) repository. 
