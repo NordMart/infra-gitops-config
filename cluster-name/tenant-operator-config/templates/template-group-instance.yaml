@@ -10,3 +10,17 @@ spec:
         operator: In
         values: [ build ]
   sync: true
+
+---
+apiVersion: tenantoperator.stakater.com/v1alpha1
+kind: TemplateGroupInstance
+metadata:
+  name: git-pat-creds
+spec:
+  template: git-pat-creds
+  selector:
+    matchExpressions:
+      - key: stakater.com/kind
+        operator: In
+        values: [ pr ]
+  sync: true
