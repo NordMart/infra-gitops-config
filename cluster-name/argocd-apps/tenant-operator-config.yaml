@@ -8,7 +8,7 @@ spec:
   destination:
     server: 'https://kubernetes.default.svc'
   source:
-    path: CLUSTER_NAME/tenant-operator-config
+    path: cluster-name/tenant-operator-config
     repoURL: 'https://github.com/DESTINATION_ORG/infra-gitops-config.git'
     targetRevision: main
     directory:

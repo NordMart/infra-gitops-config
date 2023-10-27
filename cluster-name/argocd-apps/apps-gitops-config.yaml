@@ -9,7 +9,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   project: default
   source:
-    path: argocd-apps/CLUSTER_NAME
+    path: argocd-apps/cluster-name
     repoURL: 'https://github.com/DESTINATION_ORG/apps-gitops-config'
     targetRevision: HEAD
   syncPolicy:
