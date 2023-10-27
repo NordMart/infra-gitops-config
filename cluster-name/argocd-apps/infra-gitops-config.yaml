@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: infra-gitops-config
+  namespace: rh-openshift-gitops-instance
+spec:
+  destination:
+    namespace: rh-openshift-gitops-instance
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: CLUSTER_NAME/argocd-apps
+    repoURL: 'https://github.com/DESTINATION_ORG/infra-gitops-config'
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
