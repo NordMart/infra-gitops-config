@@ -7,6 +7,6 @@ spec:
   selector:
     matchExpressions:
       - key: stakater.com/kind
-        operator: In, v
+        operator: In
         values: [ build ]
   sync: true
