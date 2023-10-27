@@ -12,10 +12,10 @@ resources:
         dataFrom:
           - extract:
               conversionStrategy: Default
-              key: git-auth-creds
+              key: git-pat-creds
         refreshInterval: 1m0s
         secretStoreRef:
           kind: ClusterSecretStore
           name: stakater-cluster-secret-store
         target:
-          name: git-auth-creds
+          name: git-pat-creds
