@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: infra-gitops-config
   namespace: rh-openshift-gitops-instance
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     namespace: rh-openshift-gitops-instance
