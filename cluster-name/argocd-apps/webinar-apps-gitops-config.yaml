@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: webinar-apps-gitops-config
+  name: apps-gitops-config
   namespace: rh-openshift-gitops-instance
 spec:
   destination:
@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: argocd-apps/CLUSTER_NAME
-    repoURL: 'https://github.com/DESTINATION_ORG/webinar-apps-gitops-config'
+    repoURL: 'https://github.com/DESTINATION_ORG/apps-gitops-config'
     targetRevision: HEAD
   syncPolicy:
     automated:

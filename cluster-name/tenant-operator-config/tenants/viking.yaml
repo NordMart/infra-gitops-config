@@ -11,7 +11,7 @@ spec:
   argocd:
     sourceRepos:
       - 'https://github.com/stakater/charts.git'
-      - 'https://github.com/DESTINATION_ORG/webinar-apps-gitops-config'
+      - 'https://github.com/DESTINATION_ORG/apps-gitops-config'
       - 'https://nexus-helm-stakater-nexus.ROUTE_SUBDOMAIN/repository/helm-charts/'
   namespaces:
   - build

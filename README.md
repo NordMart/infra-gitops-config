@@ -8,4 +8,4 @@ We have 2 clusters:
 
 ## Application workloads
 
-The environment scoped application resources are deployed through [webinar-apps-gitops-config](https://github.com/DESTINATION_ORG/webinar-apps-gitops-config) repository. 
+The environment scoped application resources are deployed through [apps-gitops-config](https://github.com/DESTINATION_ORG/apps-gitops-config) repository. 
