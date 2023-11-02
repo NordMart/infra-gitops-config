@@ -1,0 +1,35 @@
+apiVersion: tenantoperator.stakater.com/v1beta2
+kind: Tenant
+metadata:
+  name: chelsea
+spec:
+  owners:
+    users:
+    - messi@chelsea.com
+  editors:
+    users:
+    - pele@chelsea.com
+  viewers:
+    users:
+    - ronaldo@chelsea.com
+  quota: large
+  namespaces:
+    withTenantPrefix:
+    - build
+    - dev
+    - prod
+  onDelete:
+    cleanNamespaces: true
+    cleanAppProject: true
+  argocd:
+    sourceRepos:
+      - 'https://github.com/stakater/charts.git'
+      - 'https://github.com/DESTINATION_ORG/apps-gitops-config'
+      - 'https://nexus-helm-stakater-nexus.ROUTE_SUBDOMAIN/repository/helm-charts/'
+    appProject:
+      clusterResourceWhitelist:
+        - group: tronador.stakater.com
+          kind: Environment
+      namespaceResourceBlacklist:
+        - group: v1
+          kind: ConfigMap

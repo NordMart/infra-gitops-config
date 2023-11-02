@@ -1,0 +1,25 @@
+apiVersion: tenantoperator.stakater.com/v1beta1
+kind: Quota
+metadata:
+  annotations:
+    quota.tenantoperator.stakater.com/is-default: "true"
+  name: small
+spec:
+  resourcequota:
+    hard:
+      requests.cpu: '3'
+      requests.memory: '3Gi'
+      configmaps: "100"
+      secrets: "100"
+      services: "100"
+      services.loadbalancers: "1"
+  limitrange:
+    limits:
+      - type: "Pod"
+        min:
+          cpu: "20m"
+          memory: "20Mi"
+      - type: "Container"
+        defaultRequest: # this section defines default requests
+          cpu: 50m
+          memory: 50Mi
