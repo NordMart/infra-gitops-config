@@ -15,7 +15,7 @@ resources:
               key: git-pat-creds
         refreshInterval: 1m0s
         secretStoreRef:
-          kind: ClusterSecretStore
-          name: stakater-cluster-secret-store
+          kind: SecretStore
+          name: tenant-vault-shared-secret-store
         target:
           name: git-pat-creds

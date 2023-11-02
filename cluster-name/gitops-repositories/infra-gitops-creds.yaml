@@ -4,9 +4,10 @@
 #   name: infra-gitops-creds
 #   namespace: rh-openshift-gitops-instance
 # spec:
+#   refreshInterval: 1m0s
 #   secretStoreRef:
-#     name: stakater-cluster-secret-store
-#     kind: ClusterSecretStore
+#     name: tenant-vault-shared-secret-store
+#     kind: SecretStore
 #   data:
 #     - remoteRef:
 #         key: git-pat-creds
