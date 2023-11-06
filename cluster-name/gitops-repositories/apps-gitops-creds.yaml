@@ -1,32 +1,32 @@
-# apiVersion: external-secrets.io/v1beta1
-# kind: ExternalSecret
-# metadata:
-#   name: apps-gitops-creds
-#   namespace: rh-openshift-gitops-instance
-# spec:
-#   refreshInterval: 1m0s
-#   secretStoreRef:
-#     name: tenant-vault-shared-secret-store
-#     kind: SecretStore
-#   data:
-#     - remoteRef:
-#         key: git-pat-creds
-#         property: username
-#       secretKey: username
-#     - remoteRef:
-#         key: git-pat-creds
-#         property: password
-#       secretKey: password
-#   target:
-#     name: apps-gitops-creds
-#     template:
-#       metadata:
-#         labels:
-#           argocd.argoproj.io/secret-type: repository
-#       data:
-#         name: apps-gitops-creds
-#         password: "{{ .password | toString }}"
-#         username: "{{ .username | toString }}"
-#         project: TENANT_NAME
-#         type: git
-#         url: "https://github.com/DESTINATION_ORG/apps-gitops-config.git"
+apiVersion: external-secrets.io/v1beta1
+kind: ExternalSecret
+metadata:
+  name: apps-gitops-creds
+  namespace: rh-openshift-gitops-instance
+spec:
+  refreshInterval: 1m0s
+  secretStoreRef:
+    name: tenant-vault-shared-secret-store
+    kind: SecretStore
+  data:
+    - remoteRef:
+        key: git-pat-creds
+        property: username
+      secretKey: username
+    - remoteRef:
+        key: git-pat-creds
+        property: password
+      secretKey: password
+  target:
+    name: apps-gitops-creds
+    template:
+      metadata:
+        labels:
+          argocd.argoproj.io/secret-type: repository
+      data:
+        name: apps-gitops-creds
+        password: "{{ .password | toString }}"
+        username: "{{ .username | toString }}"
+        project: TENANT_NAME
+        type: git
+        url: "https://github.com/DESTINATION_ORG/apps-gitops-config.git"
