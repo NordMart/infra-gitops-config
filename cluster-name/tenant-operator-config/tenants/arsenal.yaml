@@ -27,15 +27,3 @@ spec:
   sandboxConfig:
     enabled: true
     private: true
-  argocd:
-    sourceRepos:
-      - 'https://github.com/stakater/charts.git'
-      - 'https://github.com/DESTINATION_ORG/apps-gitops-config'
-      - 'https://nexus-helm-stakater-nexus.ROUTE_SUBDOMAIN/repository/helm-charts/'
-    appProject:
-      clusterResourceWhitelist:
-        - group: tronador.stakater.com
-          kind: Environment
-      namespaceResourceBlacklist:
-        - group: v1
-          kind: ConfigMap
