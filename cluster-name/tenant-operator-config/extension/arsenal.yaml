@@ -4,7 +4,7 @@ metadata:
   name: arsenal
 spec:
   tenantName: arsenal
-  argoCDConfig:
+  argoCD:
     purgeAppProjectOnDelete: true
     appProject:
       sourceRepos:
