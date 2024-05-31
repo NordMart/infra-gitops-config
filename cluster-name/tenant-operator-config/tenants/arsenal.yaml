@@ -1,4 +1,4 @@
-apiVersion: tenantoperator.stakater.com/v1beta2
+apiVersion: tenantoperator.stakater.com/v1beta3
 kind: Tenant
 metadata:
   name: arsenal
@@ -21,9 +21,7 @@ spec:
     withoutTenantPrefix:
     - user-application-1
     - user-application-2
-  onDelete:
-    cleanNamespaces: true
-    cleanAppProject: true
+
   sandboxConfig:
     enabled: true
     private: true
