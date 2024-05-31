@@ -15,6 +15,9 @@ spec:
       - neymar@arsenal.com
   quota: large
   namespaces:
+    sandboxes:
+      enabled: true
+      private: true
     withTenantPrefix:
     - build
     - dev
@@ -23,6 +26,3 @@ spec:
     - user-application-1
     - user-application-2
 
-  sandboxConfig:
-    enabled: true
-    private: true
