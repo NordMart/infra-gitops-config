@@ -1,4 +1,4 @@
-apiVersion: tenantoperator.stakater.com/v1beta3
+apiVersion: tenantoperator.stakater.com/v1beta2
 kind: Tenant
 metadata:
   name: arsenal
