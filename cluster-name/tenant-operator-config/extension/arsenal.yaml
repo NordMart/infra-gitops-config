@@ -5,7 +5,7 @@ metadata:
 spec:
   tenantName: arsenal
   argoCD:
-    purgeAppProjectOnDelete: true
+ 
     appProject:
       sourceRepos:
         - 'https://github.com/stakater/charts.git'
