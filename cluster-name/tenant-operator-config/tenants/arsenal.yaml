@@ -3,15 +3,16 @@ kind: Tenant
 metadata:
   name: arsenal
 spec:
-  owners:
-    users:
-    - benzema@arsenal.com
-  editors:
-    users:
-    - hakimi@arsenal.com
-  viewers:
-    users:
-    - neymar@arsenal.com
+  accessControl:
+    owners:
+      users:
+      - benzema@arsenal.com
+    editors:
+      users:
+      - hakimi@arsenal.com
+    viewers:
+      users:
+      - neymar@arsenal.com
   quota: large
   namespaces:
     withTenantPrefix:
