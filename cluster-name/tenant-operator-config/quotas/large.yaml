@@ -10,7 +10,7 @@ spec:
       requests.cpu: '5'
       requests.memory: '5Gi'
       configmaps: "200"
-      secrets: "200"
+      secrets: "500"
       services: "200"
       services.loadbalancers: "2"
   limitrange:
