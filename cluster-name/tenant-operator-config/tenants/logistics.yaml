@@ -1,0 +1,19 @@
+apiVersion: tenantoperator.stakater.com/v1beta3
+kind: Tenant
+metadata:
+  name: logistics
+spec:
+  accessControl:
+    owners:
+      users:
+      - falcon@nordmart.com
+    editors:
+      users:
+      - penguin@nordmart.com
+    viewers:
+      users:
+      - owl@nordmart.com
+  quota: large
+  namespaces:
+    withTenantPrefix:
+    - dev

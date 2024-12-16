@@ -1,9 +1,9 @@
 apiVersion: tenantoperator.stakater.com/v1alpha1
 kind: Extensions
 metadata:
-  name: arsenal
+  name: retail
 spec:
-  tenantName: arsenal
+  tenantName: retail
   argoCD:
  
     appProject:

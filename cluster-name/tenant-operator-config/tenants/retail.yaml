@@ -1,18 +1,18 @@
 apiVersion: tenantoperator.stakater.com/v1beta3
 kind: Tenant
 metadata:
-  name: arsenal
+  name: retail
 spec:
   accessControl:
     owners:
       users:
-      - benzema@arsenal.com
+      - bear@nordmart.com
     editors:
       users:
-      - hakimi@arsenal.com
+      - wolf@nordmart.com
     viewers:
       users:
-      - neymar@arsenal.com
+      - eagle@nordmart.com
   quota: large
   namespaces:
     sandboxes:
